@@ -9,7 +9,7 @@ app.use(express.json());
 app.get('/',(req,res)=>{res.send("welcome")})
 
 //open the port
-app.listen(8080,()=>{console.log("Server Connected")});
+app.listen(5000,()=>{console.log("Server Connected")});
 
 //connect 
 mongoose.connect('mongodb+srv://mrprakash08112004:mrprakash@cluster0.owokt.mongodb.net/bank').then(()=>{console.log("DB connect")})
