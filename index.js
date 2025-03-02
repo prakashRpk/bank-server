@@ -12,7 +12,7 @@ app.get('/',(req,res)=>{res.send("welcome")})
 app.listen(5000,()=>{console.log("Server Connected")});
 
 //connect 
-mongoose.connect('mongodb+srv://mrprakash08112004:mrprakash@cluster0.owokt.mongodb.net/bank').then(()=>{console.log("DB connect")})
+mongoose.connect('mongodb+srv://mrprakash08112004:mrprakash@cluster0.owokt.mongodb.net/Royal-Bank').then(()=>{console.log("DB connect")})
 
 //create a schema
 
@@ -22,16 +22,17 @@ let data=new mongoose.Schema({
     password:String,
     amount:Number
 })
+let log = new mongoose.Schema({
+  login:Boolean
+})
 
-let Data=mongoose.model("test",data)
+let Data=mongoose.model("users",data)
+let Log=mongoose.model("Log",log)
 
-// let data1= new Data({
-//     name:"Udaya",
-//     email:"udaya@gmail.com",
-//     password:"vazhlkaiye vahlathan",
-//     amount:1100
+// let data2=new Log({
+//   login:false
 // })
-// data1.save()
+// data2.save()
 
 //API FOR FETCHING THE DATA
 
